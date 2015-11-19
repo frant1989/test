@@ -1,0 +1,29 @@
+работает под версией QT5.2.1 и больше
+инструкци€ по шагам...если какой-то шаг не сработает то не надо переходить к следующему
+
+1) для компиляции библиотек (именно библиотек а не проектов!!!) и распаковки скомпилированный библиотек 
+нужно запустить скрпит "compile_environment.bat"
+скрипт может выдавать ошибки :
+а) нет cygintl-2.dll нужно скачать дл€ версии и положить в папку Windows/System32
+б) нет путей к qmake, mingw48-make зайти в скрипт с помощью любого текстового редактора и поменять пути в файле set_path_qt.bat
+в соответсвии с вашими
+set PATH_TO_QMAKE=C:\Qt\Qt5.2.1\5.2.1\mingw48_32\bin
+set PATH_TO_MIGW_TOOLS=C:\Qt\Qt5.2.1\Tools\mingw48_32\bin
+2) для компил€ции сервера записи
+"compile_r_recorder.bat"
+
+2a) для компил€ции сервера записи на ffmpeg
+"compile_r_recorder_ffmpeg.bat"
+
+3) для компил€ции клиента записи
+"compile_r_recorder_client.bat"
+
+4) для старта сервера записи
+"start_r_recorder.bat"
+5) для старта управляющего клиента
+"start_r_recorder_client_manager.bat"
+
+Для прогонки тестов:
+1) l_tools
+ скрпит compile_test_l_tools.bat
+ скрипт run_test_l_tools.bat
